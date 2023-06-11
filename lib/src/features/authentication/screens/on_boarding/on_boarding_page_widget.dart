@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../models/on_boarding_screens_model.dart';
 
 class OnBoardingWdiget extends StatelessWidget {
-  OnBoardingWdiget({
+  const OnBoardingWdiget({
     super.key,
     required this.model,
   });

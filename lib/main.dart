@@ -26,27 +26,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-class Home extends StatelessWidget {
-  const Home({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Theme.of(context).primaryColorDark,
-          title: const Text('appable'),
-          leading: const Icon(Icons.ondemand_video),
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          child: const Icon(Icons.add),
-        ),
-        body: Center(
-          child: Text(
-            "Welcome Home",
-            style: Theme.of(context).textTheme.headlineLarge,
-          ),
-        ));
-  }
-}

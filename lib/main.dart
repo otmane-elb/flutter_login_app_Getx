@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
-import 'package:login_app/src/features/authentication/screens/splashscreen/splash_screen.dart';
+import 'package:login_app/src/features/authentication/screens/Login/login_screen.dart';
 import 'package:login_app/src/utils/theme/theme.dart';
 
 Future<void> main() async {
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: OAppTheme.lightTheme,
       darkTheme: OAppTheme.darkTheme,
       themeMode: ThemeMode.system,
-      home: SplashScreen(),
+      home: LoginScreen(),
     );
   }
 }

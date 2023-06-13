@@ -36,7 +36,7 @@ class WelcomeScreen extends StatelessWidget {
               children: [
                 ElevatedButton(
                     onPressed: () {
-                      Get.to(LoginScreen());
+                      Get.to(const LoginScreen());
                     },
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),

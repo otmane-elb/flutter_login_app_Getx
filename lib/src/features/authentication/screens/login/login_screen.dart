@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:login_app/src/features/authentication/screens/login/signup_screen.dart';
 
 class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,7 +48,6 @@ class LoginScreen extends StatelessWidget {
                 TextButton(
                   onPressed: () {
                                     Get.to(() => const SignupScreen());
-;
                   },
                   child: const Text('Sign up?'),
                 ),

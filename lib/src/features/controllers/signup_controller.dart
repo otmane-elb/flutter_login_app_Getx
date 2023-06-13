@@ -9,7 +9,7 @@ class SignupController extends GetxController {
   final password = TextEditingController();
   Future<void> signup(String name, String email, String password) async {
     final url = Uri.parse(
-        'https://testapi.io/api/otmane/https://testapi.io/api/otmane/signup');
+        'https://run.mocky.io/v3/d0edbad2-2871-4a7a-8b24-8702d0ef27e7');
     print(name + email + password);
     final response = await http.post(
       url,

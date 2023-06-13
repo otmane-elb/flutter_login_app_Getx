@@ -23,7 +23,7 @@ class SignupScreen extends StatelessWidget {
             const SizedBox(height: 20.0),
             TextField(
               controller: controller.name,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: 'Name',
                 prefixIcon: Icon(Icons.person),
               ),
@@ -31,7 +31,7 @@ class SignupScreen extends StatelessWidget {
             const SizedBox(height: 10.0),
             TextField(
               controller: controller.email,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: 'Email',
                 prefixIcon: Icon(Icons.email),
               ),
@@ -39,13 +39,13 @@ class SignupScreen extends StatelessWidget {
             const SizedBox(height: 10.0),
             TextField(
               controller: controller.password,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: 'Password',
                 prefixIcon: Icon(Icons.lock),
               ),
               obscureText: true,
             ),
-            SizedBox(height: 20.0),
+            const SizedBox(height: 20.0),
             ElevatedButton(
               onPressed: () {
                 controller.signup(controller.name.text, controller.email.text,

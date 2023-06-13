@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:login_app/src/features/authentication/screens/Login/login_screen.dart';
+import 'package:login_app/src/features/authentication/screens/welcome/welcome_screen.dart';
 import 'package:login_app/src/repository/auth.dart';
 import 'package:login_app/src/utils/theme/theme.dart';
 
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
       theme: OAppTheme.lightTheme,
       darkTheme: OAppTheme.darkTheme,
       themeMode: ThemeMode.system,
-      home: const LoginScreen(),
+      home: const WelcomeScreen(),
     );
   }
 }

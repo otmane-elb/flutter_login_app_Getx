@@ -9,7 +9,6 @@ class SignupScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(SignupController());
-
     return Scaffold(
       body: Container(
         padding: const EdgeInsets.all(20.0),
@@ -48,15 +47,15 @@ class SignupScreen extends StatelessWidget {
             const SizedBox(height: 20.0),
             ElevatedButton(
               onPressed: () {
-                controller.signup(controller.name.text, controller.email.text,
-                    controller.password.text);
+                controller.signup(controller.email.text.trim(),
+                    controller.password.text.trim());
               },
               child: const Text('Signup'),
             ),
             const SizedBox(height: 10.0),
             TextButton(
               onPressed: () {
-                Get.to(() => LoginScreen());
+                Get.to(() => const LoginScreen());
               },
               child: const Text('Already have an account? Login'),
             ),

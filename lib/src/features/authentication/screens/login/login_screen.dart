@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:login_app/src/features/authentication/screens/login/signup_screen.dart';
+import 'package:login_app/src/features/controllers/logins_screen_controller.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(LoginController());
     return Scaffold(
       body: Container(
         padding: const EdgeInsets.all(20.0),
@@ -18,15 +20,17 @@ class LoginScreen extends StatelessWidget {
               size: 100.0,
             ),
             const SizedBox(height: 20.0),
-            const TextField(
-              decoration: InputDecoration(
+            TextField(
+              controller: controller.email,
+              decoration: const InputDecoration(
                 hintText: 'Email',
                 prefixIcon: Icon(Icons.email),
               ),
             ),
             const SizedBox(height: 10.0),
-            const TextField(
-              decoration: InputDecoration(
+            TextField(
+              controller: controller.password,
+              decoration: const InputDecoration(
                 hintText: 'Password',
                 prefixIcon: Icon(Icons.lock),
               ),
@@ -34,7 +38,10 @@ class LoginScreen extends StatelessWidget {
             ),
             const SizedBox(height: 20.0),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                controller.login(controller.email.text.trim(),
+                    controller.password.text.trim());
+              },
               child: const Text('Login'),
             ),
             const SizedBox(height: 10.0),
@@ -47,7 +54,7 @@ class LoginScreen extends StatelessWidget {
                 ),
                 TextButton(
                   onPressed: () {
-                                    Get.to(() => const SignupScreen());
+                    Get.to(() => const SignupScreen());
                   },
                   child: const Text('Sign up?'),
                 ),

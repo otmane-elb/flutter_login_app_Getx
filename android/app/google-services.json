@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "791455712882",
+    "project_id": "getxlogin-595ba",
+    "storage_bucket": "getxlogin-595ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:791455712882:android:fd70dc9190869666d9a4eb",
+        "android_client_info": {
+          "package_name": "com.example.login_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "791455712882-3s94dgpevratpqjd4r8mpmi7p39u3pp2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOkpdwoj1IyRHI2Zkfl3Nz7aSmqqr8wEY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "791455712882-3s94dgpevratpqjd4r8mpmi7p39u3pp2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:login_app/src/constants/images_strings.dart';
 import 'package:login_app/src/constants/text_strings.dart';
 import 'package:login_app/src/features/authentication/screens/login/login_screen.dart';
+import 'package:login_app/src/features/authentication/screens/login/signup_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -36,7 +37,7 @@ class WelcomeScreen extends StatelessWidget {
               children: [
                 ElevatedButton(
                     onPressed: () {
-                      Get.to(const LoginScreen());
+                      Get.to(() => const LoginScreen());
                     },
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -46,7 +47,9 @@ class WelcomeScreen extends StatelessWidget {
                       ),
                     )),
                 ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.to(() => const SignupScreen());
+                    },
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(

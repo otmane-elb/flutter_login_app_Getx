@@ -1,12 +1,14 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 import 'package:login_app/src/features/authentication/screens/Login/login_screen.dart';
+import 'package:login_app/src/repository/auth.dart';
 import 'package:login_app/src/utils/theme/theme.dart';
 
 Future<void> main() async {
-  await Future.delayed(const Duration(seconds: 2));
-  FlutterNativeSplash.remove();
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp().then((value) => Get.put(AuthRepo()));
+
   runApp(const MyApp());
 }
 
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
       theme: OAppTheme.lightTheme,
       darkTheme: OAppTheme.darkTheme,
       themeMode: ThemeMode.system,
-      home: LoginScreen(),
+      home: const LoginScreen(),
     );
   }
 }
